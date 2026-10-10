@@ -15,11 +15,13 @@ public Transform groundcheck;
 public float r;
 public LayerMask whatIsGround;
 private bool grounded;
+private Animator anim;
 
 
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -46,6 +48,11 @@ private bool grounded;
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumph);
         }
+
+        anim.SetFloat("speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+        anim.SetBool("grounded", grounded);
+        anim.SetFloat("height", GetComponent<Rigidbody2D>().velocity.y);
+    
     }
     void FixedUpdate() 
     {
