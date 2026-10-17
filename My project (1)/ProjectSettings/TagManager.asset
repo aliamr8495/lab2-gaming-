@@ -44,3 +44,6 @@ TagManager:
   - name: 1
     uniqueID: 138637797
     locked: 0
+  - name: lake
+    uniqueID: 4236644879
+    locked: 0
