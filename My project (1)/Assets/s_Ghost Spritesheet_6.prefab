@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 4
-  damage: 1
+  damage: 3
   sr: {fileID: 0}
 --- !u!61 &6016326059021603562
 BoxCollider2D:
